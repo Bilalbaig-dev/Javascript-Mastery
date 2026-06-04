@@ -138,3 +138,14 @@ const person={
 function greet2(name){
     return "Hello "+name;
 } //function
+
+
+/*******************************stack(primitive) and heap(non-primitive)*****************************/
+let a=10; // stored in stack
+let b=a; // b gets a copy of the value of a, stored in stack
+b=20; // changing b does not affect a, because they are stored separately in the stack
+
+let obj1={name:"Bilal",age:20}; // stored in heap
+let obj2=obj1; // obj2 gets a reference to the same object in the heap
+obj2.name="Ali"; // changing obj2 also changes obj1, because they reference the same object in the heap
+console.log(obj1); // {name:"Ali"
