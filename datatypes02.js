@@ -111,3 +111,30 @@ null > 0; // false
 null >= 0; // true (null is converted to 0 for comparison)
 undefined > 0; // false
 undefined >= 0; // false (undefined is not converted to a number for comparison)
+
+
+/*********************primitive & non-primitive data types(reference types) ********************/
+
+//primitive data types: number, string, boolean, null, undefined, symbol,BigInt
+const score=100; //number
+const name2="Bilal"; //string
+const isStudent=true; //boolean
+const emptyValue=null;
+let notAssigned; //undefined
+const bigNumber=1234567890123456789012345678901234567890n; //BigInt
+const uniqueId=Symbol("id"); //symbol
+const anotherUniqueId=Symbol("id"); // another unique symbol, even with the same description
+console.log(uniqueId === anotherUniqueId); // false (each symbol is unique)
+
+
+
+//non-primitive data types: object, array, function
+const heros=["Superman","Batman", "spiderman"] //array (which is a type of object)
+const person={
+    name:"Bilal",
+    age:20,
+    isStudent:true
+} //object
+function greet2(name){
+    return "Hello "+name;
+} //function
